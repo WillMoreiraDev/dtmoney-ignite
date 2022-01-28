@@ -1,6 +1,12 @@
+import { useEffect } from 'react'
+import { api } from '../../services/api'
 import { TransitionsTableStyles } from './styles'
 
 export const TransitionsTable = () => {
+  useEffect(() => {
+    api.get('transactions')
+    .then(data => console.log(data))
+  }, [])
   return (
     <TransitionsTableStyles>
       <div className="container">

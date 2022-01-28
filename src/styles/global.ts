@@ -50,4 +50,36 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0px 15px;
     margin: 0 auto;
   }
+
+  .react-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .react-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 57.6rem;
+    background-color: #F0F2F5;
+    border-radius: 5px;
+    padding: 6.4rem 4.8rem;
+    animation: fadeUp .3s forwards;
+  }
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(40px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0px);
+    }
+  }
 `
